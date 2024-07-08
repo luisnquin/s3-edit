@@ -32,11 +32,12 @@ func createTempfile(path myS3.Path, body []byte) (tempDirPath string, tempfilePa
 		fmt.Println(err)
 		os.Exit(1)
 	}
+
 	keys := strings.Split(path.Key, "/")
 	fileName := keys[len(keys)-1]
 	tempfilePath = tempDirPath + "/" + fileName
 
-	if err := ioutil.WriteFile(tempfilePath, body, os.ModePerm); err != nil {
+	if err := os.WriteFile(tempfilePath, body, os.ModePerm); err != nil {
 		fmt.Println(err)
 		os.Exit(1)
 	}
@@ -51,12 +52,13 @@ func editFile(path string) string {
 	cmd.Stderr = os.Stderr
 	cmd.Stdout = os.Stdout
 	cmd.Stdin = os.Stdin
+
 	if err := cmd.Run(); err != nil {
 		fmt.Println(err)
 		os.Exit(1)
 	}
 
-	changedFile, err := ioutil.ReadFile(path)
+	changedFile, err := os.ReadFile(path)
 	if err != nil {
 		fmt.Println(err)
 		os.Exit(1)
@@ -70,5 +72,6 @@ func getDefaultEditor() string {
 	if editor == "" {
 		return "vi"
 	}
+
 	return editor
 }
