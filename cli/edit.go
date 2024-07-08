@@ -8,8 +8,8 @@ import (
 	"strings"
 
 	"github.com/aws/aws-sdk-go/service/s3"
-	myS3 "github.com/tsub/s3-edit/cli/s3"
-	"github.com/tsub/s3-edit/config"
+	myS3 "github.com/luisnquin/s3-edit/cli/s3"
+	"github.com/luisnquin/s3-edit/config"
 )
 
 // Edit directly a file on S3

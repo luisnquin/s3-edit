@@ -2,17 +2,17 @@
 
 Edit directly a file on Amazon S3 in CLI.
 
-[![GitHub release](https://img.shields.io/github/release/tsub/s3-edit.svg?style=flat-square)](https://github.com/tsub/s3-edit/releases)
+[![GitHub release](https://img.shields.io/github/release/tsub/s3-edit.svg?style=flat-square)](https://github.com/luisnquin/s3-edit/releases)
 [![CircleCI branch](https://img.shields.io/circleci/project/github/tsub/s3-edit/master.svg?style=flat-square)](https://circleci.com/gh/tsub/s3-edit/tree/master)
-[![Go Documentation](http://img.shields.io/badge/go-documentation-blue.svg?style=flat-square)](https://godoc.org/github.com/tsub/s3-edit)
-[![MIT license](https://img.shields.io/github/license/tsub/s3-edit.svg?style=flat-square)](https://github.com/tsub/s3-edit/blob/master/LICENSE)
+[![Go Documentation](http://img.shields.io/badge/go-documentation-blue.svg?style=flat-square)](https://godoc.org/github.com/luisnquin/s3-edit)
+[![MIT license](https://img.shields.io/github/license/tsub/s3-edit.svg?style=flat-square)](https://github.com/luisnquin/s3-edit/blob/master/LICENSE)
 
 ## Installation
 
 ### Use go get
 
 ```
-$ go get -u github.com/tsub/s3-edit
+go get -u github.com/luisnquin/s3-edit
 ```
 
 ### Install with Homebrew
@@ -20,12 +20,12 @@ $ go get -u github.com/tsub/s3-edit
 For macOS and Linux
 
 ```
-$ brew install tsub/s3-edit/s3-edit
+brew install tsub/s3-edit/s3-edit
 ```
 
 ### Get binary from GitHub releases
 
-Download latest binary from https://github.com/tsub/s3-edit/releases
+Download latest binary from <https://github.com/luisnquin/s3-edit/releases>
 
 ## Requirements
 
@@ -35,16 +35,16 @@ Download latest binary from https://github.com/tsub/s3-edit/releases
 For examples, use aws-cli
 
 ```
-$ aws configure --profile myaccount
-$ export AWS_PROFILE=myaccount
+aws configure --profile myaccount
+export AWS_PROFILE=myaccount
 ```
 
 Other methods,
 
 ```
-$ export AWS_ACCESS_KEY_ID=xxxx
-$ export AWS_SECRET_ACCESS_KEY=xxxx
-$ export AWS_REGION=ap-northeast-1
+export AWS_ACCESS_KEY_ID=xxxx
+export AWS_SECRET_ACCESS_KEY=xxxx
+export AWS_REGION=ap-northeast-1
 ```
 
 ## Usage
@@ -52,14 +52,14 @@ $ export AWS_REGION=ap-northeast-1
 Upload the file to S3 in advance.
 
 ```
-$ echo "This is a test file." > myfile.txt
-$ aws s3 cp test.txt s3://mybucket/myfile.txt
+echo "This is a test file." > myfile.txt
+aws s3 cp test.txt s3://mybucket/myfile.txt
 ```
 
 To directly edit a file on S3, use `edit` subcommand.
 
 ```
-$ s3-edit edit s3://mybucket/myfile.txt
+s3-edit edit s3://mybucket/myfile.txt
 ```
 
 Then, open a file with the default editor specified by `$EDITOR`.

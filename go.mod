@@ -1,4 +1,4 @@
-module github.com/tsub/s3-edit
+module github.com/luisnquin/s3-edit
 
 go 1.17
 

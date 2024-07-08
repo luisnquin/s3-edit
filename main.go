@@ -6,9 +6,9 @@ import (
 	"os"
 
 	"github.com/aws/aws-sdk-go/aws"
-	"github.com/tsub/s3-edit/cli"
-	"github.com/tsub/s3-edit/cli/s3"
-	"github.com/tsub/s3-edit/config"
+	"github.com/luisnquin/s3-edit/cli"
+	"github.com/luisnquin/s3-edit/cli/s3"
+	"github.com/luisnquin/s3-edit/config"
 )
 
 func main() {
